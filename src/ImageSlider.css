@@ -1,0 +1,35 @@
+.slider-wrapper{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;   
+}
+.btn-right,.btn-left{
+    min-width: 40px;
+    min-height: 40px;
+    z-index: 1;
+    border-radius: 20px;
+    background: transparent url(./components/assets/arrow.svg) center no-repeat;
+    border: none;
+    padding: 30px;
+    margin: 5px;
+}
+.image {    
+    width: 1000px;
+    height: 600px;
+    border-radius: 10px;
+    z-index: 0;
+    object-fit: cover;
+  }
+  .slider{
+    opacity: 0;
+    transition-duration: 1s ease;
+}
+.slider.active{
+    opacity: 1;
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1)
+}
+.btn-left{
+    transform: rotate(180deg);
+}
